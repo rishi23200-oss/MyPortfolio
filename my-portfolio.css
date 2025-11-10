@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    /* background: linear-gradient(orange,white,green); */
+
+}
+
+@font-face {
+    font-family: "Retro-Santa-BF690226ea06f3e";
+    src: url(Retro-Santa-BF690226ea06f3e.otf);
+}
+
+section{
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center;     */
+    flex-direction: column;
+
+}
+
+section>nav{
+    height: 75vh;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: fixed;
+    right: 5px;
+    top: 100px;
+    /* background-color: bisque; */
+
+
+}
+
+section>nav .bi{
+  font-size: 40px;
+}
+
+nav> .item{
+    position: relative;
+}
+nav> .item span{
+    position: absolute;
+    top: 13px;
+    /* display: none; */
+    opacity: 0;
+    z-index: -1;
+}
+section>nav .item:hover span{
+    /* display: block; */
+    /* transform: translate(-50px); */
+    /* transition: all 1000ms ease; */
+    animation: drag 400ms ease forwards;
+}
+@keyframes drag {
+    from{
+       transform: translate(0px); 
+    }
+    to{
+        transform: translate(-50px);
+        opacity: 1;
+    }
+}
+
+.logo{
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-family: "Retro-Santa-BF690226ea06f3e"'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 5px;
+    
+}
+
+/* Home */
+
+.home-banner{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(lightyellow);
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    img{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.home-banner>.left{
+    width: 40%;
+    display: grid;
+    place-items: center;
+}
+
+.home-banner>.right{
+    h3{
+        font-size: 2rem;
+        
+    }
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+
+   
